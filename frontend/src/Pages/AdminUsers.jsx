@@ -7,7 +7,7 @@ const AdminUsers = () => {
   const { authorizationToken } = useAuth();
   const getAllUsersData = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/admin/users/", {
+      const response = await fetch("https://mern-with-admin-panel.vercel.app/api/admin/users/", {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
