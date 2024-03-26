@@ -11,7 +11,13 @@ const connectToDb=require("./config/db");
 const errorMiddleware = require('./middleware/errorMiddleware');
 
 connectToDb();
-app.use(cors())
+app.use(cors(
+    {
+        origin:[''],
+        methods:["POST","GET"],
+        credentials:true
+    }
+))
 app.use(express.json())
 app.use("/api/auth", router)
 app.use("/api/form", contactRoute)
