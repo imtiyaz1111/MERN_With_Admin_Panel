@@ -15,7 +15,7 @@ const AdminUpdate = () => {
   const getSingleUserData = async () => {
     try {
       const response = await fetch(
-        `http://localhost:8000/api/admin/users/${params.id}`,
+        `https://mern-with-admin-panel.vercel.app/admin/users/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -49,7 +49,7 @@ const AdminUpdate = () => {
       e.preventDefault();
       try {
         const response = await fetch(
-          `http://localhost:8000/api/admin/users/update/${params.id}`,
+          `https://mern-with-admin-panel.vercel.app/api/admin/users/update/${params.id}`,
           {
             method: "PATCH",
             headers: {
