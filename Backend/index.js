@@ -13,7 +13,7 @@ const errorMiddleware = require('./middleware/errorMiddleware');
 connectToDb();
 app.use(cors(
     {
-        origin:[''],
+        origin:['https://mern-with-admin-panel-fmsu.vercel.app/'],
         methods:["POST","GET"],
         credentials:true
     }
