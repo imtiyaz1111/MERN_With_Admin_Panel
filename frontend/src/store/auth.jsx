@@ -27,7 +27,7 @@ export const AuthProvider = ({ children }) => {
   // function to check the user Authentication or not
   const userAuthentication = async () => {
     try {
-      const response = await fetch("http://localhost:8000/api/auth/user", {
+      const response = await fetch(`${window.location.origin}/api/auth/user`, {
         method: "GET",
         headers: {
           Authorization: authorizationToken,
@@ -50,7 +50,7 @@ export const AuthProvider = ({ children }) => {
   // to fetch the service data from the database
   const getServices= async()=>{
     try {
-      const response = await fetch("http://localhost:8000/api/data/service/",{
+      const response = await fetch(`${window.location.origin}/api/data/service/`,{
         method:"GET",
       })
       if(response.ok)
