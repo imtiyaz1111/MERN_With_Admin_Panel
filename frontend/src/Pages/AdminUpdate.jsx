@@ -15,7 +15,7 @@ const AdminUpdate = () => {
   const getSingleUserData = async () => {
     try {
       const response = await fetch(
-        `{window.location.origin}/api/admin/users/${params.id}`,
+        `${window.location.origin}/api/admin/users/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -49,7 +49,7 @@ const AdminUpdate = () => {
       e.preventDefault();
       try {
         const response = await fetch(
-          `{window.location.origin}/api/admin/users/update/${params.id}`,
+          `${window.location.origin}/api/admin/users/update/${params.id}`,
           {
             method: "PATCH",
             headers: {
