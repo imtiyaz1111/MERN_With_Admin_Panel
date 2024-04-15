@@ -8,7 +8,7 @@ const AdminContacts = () => {
   const getContactsData= async()=>{
     try {
       const response=await fetch(
-        `http://localhost:8000/api/admin/contacts`,
+        `{window.location.origin}/api/admin/contacts`,
         {
           method: "GET",
           headers: {
@@ -31,7 +31,7 @@ const AdminContacts = () => {
 
   const deleteContact=async(id)=>{
     try {
-      const response=await fetch(`http://localhost:8000/api/admin/contacts/delete/${id}`,{
+      const response=await fetch(`{window.location.origin}/api/admin/contacts/delete/${id}`,{
         method: "DELETE",
         headers: {
           Authorization: authorizationToken,
