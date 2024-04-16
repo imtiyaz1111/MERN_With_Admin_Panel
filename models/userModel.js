@@ -32,7 +32,7 @@ userSchema.methods.generateAuthToken = async function () {
             email:this.email,
             isAdmin:this.isAdmin
         },
-        process.env.JWT_SECTRET_KEY,
+       JFFHJFHOADRJEWJRIONCSCNVJDDJFFJSFFJFOIWEWFWEFMFNSDFLEWIF,
         {
             expiresIn:"30d",
         }
